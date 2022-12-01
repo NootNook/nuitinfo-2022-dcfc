@@ -1,12 +1,11 @@
-import Captcha from './Captcha';
-import Game from './Game';
-import Header from './Header';
+import Main from '@components/Main';
+import Header from '@components/Header';
 
 const App = () => {
   return (
     <div className='App'>
       <Header />
-      <Game />
+      <Main />
     </div>
   );
 };
