@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class ControlPlayer : MonoBehaviour
 {
 
-    public float max_vel = 3;
+    public float max_vel = 5;
     public float min_vel = 0.1f;
 
     private Rigidbody2D corps;
