@@ -11,8 +11,9 @@ public class ControlPlayer : MonoBehaviour
 
     private Rigidbody2D corps;
 
-    private int max_jumps = 1;
+    public int max_jumps = 1;
     private int cur_jumps = 0;
+    public bool allow_walljumps = false;
 
     private float x_acc = 0;
     private float y_acc = 0;
@@ -26,7 +27,7 @@ public class ControlPlayer : MonoBehaviour
     void OnMove(InputValue value)
     {
         Vector2 Move = value.Get<Vector2>();
-        y_acc = Move[0];
+        x_acc = Move[0];
         Debug.Log(Move);
 
     }
@@ -36,27 +37,33 @@ public class ControlPlayer : MonoBehaviour
         if(value.isPressed)
         {
             if(this.cur_jumps < this.max_jumps){
-                this.x_acc = 1;
+                this.corps.velocity = Vector2.zero;
                 cur_jumps ++;
+                this.y_acc = 1.0f - 0.25f * cur_jumps;
+                Debug.Log(this.y_acc);
             }
         }
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        this.cur_jumps = 0;
-        this.corps.velocity = this.corps.velocity * 0.6f;
         ContactPoint2D point = col.GetContact(0);
-        Debug.Log(point);
+        Debug.Log("Normal");
+        Debug.Log(point.normal);
+        if(point.normal[1] > 0 || (point.normal[0] != 0 && allow_walljumps))
+        {
+            this.cur_jumps = 0;
+        }
+        //this.y_acc = 0;
     }
 
     void FixedUpdate()
     {
-        Vector2 force_avance = new Vector2(this.y_acc * 0.3f,0);
-        Vector2 force_saut = new Vector2(0,this.x_acc * 8);
-        this.x_acc = 0;
+        Vector2 force_avance = new Vector2(this.x_acc * 8f,0);
+        Vector2 force_saut = new Vector2(0,this.y_acc * 7);
+        this.y_acc = 0;
         this.corps.AddForce(force_saut,ForceMode2D.Impulse);
-        this.corps.AddForce(force_avance,ForceMode2D.Impulse);
+        this.corps.AddForce(force_avance,ForceMode2D.Force);
         if (this.corps.velocity[0] > this.max_vel)
         {
             this.corps.velocity = new Vector2(this.max_vel,this.corps.velocity[1]);
