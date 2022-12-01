@@ -28,8 +28,8 @@ public class ControlPlayer : MonoBehaviour
     {
         Vector2 Move = value.Get<Vector2>();
         x_acc = Move[0];
+        y_acc = 0.3f * Move[1];
         Debug.Log(Move);
-
     }
 
     void OnJump(InputValue value)
@@ -54,7 +54,6 @@ public class ControlPlayer : MonoBehaviour
         {
             this.cur_jumps = 0;
         }
-        //this.y_acc = 0;
     }
 
     void FixedUpdate()
