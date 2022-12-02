@@ -21,10 +21,10 @@ public class BulletDestroy : MonoBehaviour
     }
 
     void OnCollisionEnter2D(){
-        if (this.bounces > 1){
+        if (this.bounces > 10){
             Destroy(gameObject);
         }
-        else if (this.bounces <=1){
+        else if (this.bounces <=10){
             this.bounces +=1;
         }
     }
