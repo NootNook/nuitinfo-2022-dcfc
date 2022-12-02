@@ -1,15 +1,12 @@
-import Unity, { UnityContent } from "react-unity-webgl";
+import Unity, { UnityContent } from 'react-unity-webgl';
 
 const Game = () => {
-  const unityContent = new UnityContent(
-    "/public/build/build.json",
-    "/public/build/UnityLoader.js"
-  );
+  const unityContent = new UnityContent('/public/build/build.json', '/public/build/UnityLoader.js');
 
   return (
-      <div className='flex h-screen justify-center items-center'>
-        <Unity unityContent={unityContent} />
-      </div>
+    <div className='flex h-screen justify-center items-center'>
+      <Unity unityContent={unityContent} />
+    </div>
   );
 };
 
