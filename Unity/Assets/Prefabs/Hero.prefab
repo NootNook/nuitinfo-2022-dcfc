@@ -100,7 +100,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.019034177, y: 0.022845745}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +111,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5355664, y: 0.9543085}
   m_EdgeRadius: 0
 --- !u!50 &2449801768196602875
 Rigidbody2D:
@@ -5076,7 +5076,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5147,4 +5147,4 @@ MonoBehaviour:
   particles: {fileID: 2449801768594409072}
   bulletModel: {fileID: 5256508198622182203, guid: 0e13f6776b643d940a1980c774114480,
     type: 3}
-  cooldown: 1
+  cooldown: 0.3

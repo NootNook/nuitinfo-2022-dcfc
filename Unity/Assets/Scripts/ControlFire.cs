@@ -25,7 +25,6 @@ public class ControlFire : MonoBehaviour
     }
 
     void OnShoot(InputValue value){
-        print("test");
         if(value.isPressed && (Time.time - this.last_fire > this.cooldown))
         {
             this.last_fire = Time.time;
