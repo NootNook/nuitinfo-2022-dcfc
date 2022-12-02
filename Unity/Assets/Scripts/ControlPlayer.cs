@@ -17,7 +17,6 @@ public class ControlPlayer : MonoBehaviour
 
     private float x_acc = 0;
     private float y_acc = 0;
-    private Vector2 mouse_position;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +29,7 @@ public class ControlPlayer : MonoBehaviour
         Vector2 Move = value.Get<Vector2>();
         x_acc = Move[0];
         y_acc = 0.3f * Move[1];
+        Debug.Log(Move);
     }
 
     void OnJump(InputValue value)
@@ -40,6 +40,7 @@ public class ControlPlayer : MonoBehaviour
                 this.corps.velocity = Vector2.zero;
                 cur_jumps ++;
                 this.y_acc = 1.0f - 0.25f * cur_jumps;
+                Debug.Log(this.y_acc);
             }
         }
     }
@@ -47,12 +48,13 @@ public class ControlPlayer : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         ContactPoint2D point = col.GetContact(0);
+        Debug.Log("Normal");
+        Debug.Log(point.normal);
         if(point.normal[1] > 0 || (point.normal[0] != 0 && allow_walljumps))
         {
             this.cur_jumps = 0;
         }
     }
-
 
     void FixedUpdate()
     {
