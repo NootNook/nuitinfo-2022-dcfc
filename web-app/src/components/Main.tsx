@@ -6,8 +6,8 @@ const Main = () => {
   const [check, setCheck] = useState(false);
 
   const handleCheck = (event: any) => {
-    const { one, two, three, four } = event;
-    const result = one && two && !three && !four;
+    const { one, two, three } = event;
+    const result = !one && two && !three;
 
     setCheck(result);
   };

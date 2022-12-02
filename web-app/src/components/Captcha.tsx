@@ -5,7 +5,6 @@ const Captcha = ({ handleCheck }: any) => {
     one: false,
     two: false,
     three: false,
-    four: false,
   });
 
   const handleChange = (event: any) => {
@@ -24,33 +23,32 @@ const Captcha = ({ handleCheck }: any) => {
 
   return (
     <div className='flex h-screen justify-center items-center'>
-      <form className='flex flex-col' onSubmit={handleSubmit}>
-        <label className='flex'>
-          QUESTION A
-          <input
-            className='m-5 cursor-pointer'
-            name='one'
-            type='checkbox'
-            onChange={handleChange}
-          />
-          <input
-            className='m-5 cursor-pointer'
-            name='two'
-            type='checkbox'
-            onChange={handleChange}
-          />
-          <input
-            className='m-5 cursor-pointer'
-            name='three'
-            type='checkbox'
-            onChange={handleChange}
-          />
-          <input
-            className='m-5 cursor-pointer'
-            name='four'
-            type='checkbox'
-            onChange={handleChange}
-          />
+      <form className='flex flex-col justify-center align-center' onSubmit={handleSubmit}>
+        <label className='flex flex-col justify-center align-center'>
+          Si un.e personne dit “oui” après 30 min de demande, le consentement est-il respecté ?
+          <div>
+            Oui
+            <input
+              className='m-5 cursor-pointer'
+              name='one'
+              type='checkbox'
+              onChange={handleChange}
+            />
+            Non
+            <input
+              className='m-5 cursor-pointer'
+              name='two'
+              type='checkbox'
+              onChange={handleChange}
+            />
+            Ça dépend
+            <input
+              className='m-5 cursor-pointer'
+              name='three'
+              type='checkbox'
+              onChange={handleChange}
+            />
+          </div>
         </label>
         <input
           className='border-2 border-gray-300 cursor-pointer hover:bg-violet-600'
