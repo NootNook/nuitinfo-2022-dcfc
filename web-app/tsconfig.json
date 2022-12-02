@@ -20,6 +20,6 @@
       "@components/*": ["components/*"]
     }
   },
-  "include": ["src", "public/build", "public/build"],
+  "include": ["src", "public/oldbuild", "public/oldbuild"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -22,13 +22,22 @@ const Modal = ({ onClose }: IModal) => {
       onClick={handleClose}
     >
       <div className='flex flex-col p-4 w-2/12 lg:w-8/12 h-2/4 bg-white rounded-lg shadow '>
-        Ce projet de la nuit de l'info 2022 comporte un Captcha avant d'accéder au jeu. Vous devez simplement répondre correctement aux questions posées.
-        <br /><br />Les auteurs de ce projet :<br /><br />
-        - Alex Couderay<br />
-        - Laêtitia Cabrol<br />
-        - Florian Bernadet<br />
-        - Romain Réau<br />
-        - Youssef Blaiha<br />
+        Ce projet de la nuit de l'info 2022 comporte un Captcha avant d'accéder au jeu. Vous devez
+        simplement répondre correctement aux questions posées.
+        <br />
+        <br />
+        Les auteurs de ce projet :<br />
+        <br />
+        - Alex Coudray
+        <br />
+        - Laêtitia Cabrol
+        <br />
+        - Florian Bernadet
+        <br />
+        - Romain Réau
+        <br />
+        - Youssef Blaiha
+        <br />
       </div>
     </div>,
     document.body

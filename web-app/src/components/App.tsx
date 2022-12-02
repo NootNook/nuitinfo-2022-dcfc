@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Router>
       <Header onClickInfo={onClickInfo} />
-      {isVisibleModal && <Modal onClose={setVisibleModal}/>}
+      {isVisibleModal && <Modal onClose={setVisibleModal} />}
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/game' element={<Game />} />
