@@ -143,10 +143,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3808740174876494629, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808740174876494629, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808740174876494629, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808740174876494629, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5383562547728041416, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
         type: 3}
       propertyPath: m_Name
-      value: Lave 2x1
+      value: Lave 2x1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490754644120740017, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490754644120740017, guid: 6a09a82aab33bc44c9f579ce2d786fc9,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a09a82aab33bc44c9f579ce2d786fc9, type: 3}

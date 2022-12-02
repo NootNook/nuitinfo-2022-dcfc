@@ -88,6 +88,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 176972955916394700, guid: 1894d518d1531934ea3c5eb3d1e5168f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 176972955916394700, guid: 1894d518d1531934ea3c5eb3d1e5168f,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176972955916394700, guid: 1894d518d1531934ea3c5eb3d1e5168f,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 176972955916394700, guid: 1894d518d1531934ea3c5eb3d1e5168f,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1224441939158350107, guid: 1894d518d1531934ea3c5eb3d1e5168f,
         type: 3}
       propertyPath: m_RootOrder
@@ -143,10 +163,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8835203427104328536, guid: 1894d518d1531934ea3c5eb3d1e5168f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835203427104328536, guid: 1894d518d1531934ea3c5eb3d1e5168f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8942362602153438753, guid: 1894d518d1531934ea3c5eb3d1e5168f,
         type: 3}
       propertyPath: m_Name
-      value: Lave 3x1
+      value: Lave 3x1 Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1894d518d1531934ea3c5eb3d1e5168f, type: 3}

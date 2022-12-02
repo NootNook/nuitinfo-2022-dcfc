@@ -9,6 +9,8 @@ public class ControlPlayer : MonoBehaviour
     public float max_vel = 5;
     public float min_vel = 0.1f;
 
+    public GameObject SavePoint;
+
     private Rigidbody2D corps;
 
     public int max_jumps = 1;
@@ -46,6 +48,14 @@ public class ControlPlayer : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+
+        if( col.gameObject.tag == "Killer" )
+        {
+            Vector3 save_point = this.SavePoint.transform.position;
+            save_point.z = 0;
+            transform.position = save_point;
+        }
+
         ContactPoint2D point = col.GetContact(0);
         if(point.normal[1] > 0 || (point.normal[0] != 0 && allow_walljumps))
         {
