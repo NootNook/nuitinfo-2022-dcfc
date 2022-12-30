@@ -1,15 +1,17 @@
-import Unity, { UnityContent } from "react-unity-webgl";
+import { Unity, useUnityContext } from 'react-unity-webgl';
 
 const Game = () => {
-  const unityContent = new UnityContent(
-    "/public/build/build.json",
-    "/public/build/UnityLoader.js"
-  );
+  const { unityProvider } = useUnityContext({
+    loaderUrl: '/public/build/Documents.loader.js',
+    dataUrl: '/public/build/webgl.data',
+    frameworkUrl: '/public/build/build.framework.js',
+    codeUrl: '/public/build/build.wasm',
+  });
 
   return (
-      <div className='flex h-screen justify-center items-center'>
-        <Unity unityContent={unityContent} />
-      </div>
+    <div className='flex h-screen justify-center items-center'>
+      <Unity unityProvider={unityProvider} style={{ width: 1600, height: 900 }}/>
+    </div>
   );
 };
 
